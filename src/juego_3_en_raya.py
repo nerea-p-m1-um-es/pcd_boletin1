@@ -35,6 +35,13 @@ def movimiento_valido(n, x, y, movimientos_otro_jugador):
     return True
 
 
+def jugada_ganadora(movimientos_jugador):
+    #Comprobamos si hay 3 fichas en una fila
+    for fila in movimientos_jugador:
+        movimientos_columna = movimientos_jugador[fila]
+        if len(movimientos_columna)==3:
+            return True
+    return False
 
 
 if __name__ == "__main__":
